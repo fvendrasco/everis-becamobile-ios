@@ -1,0 +1,6 @@
+framework module Pods_VendrascoMovie {
+  umbrella header "Pods-VendrascoMovie-umbrella.h"
+
+  export *
+  module * { export * }
+}

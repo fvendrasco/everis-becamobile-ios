@@ -13,9 +13,12 @@
 		5F554D3725A7794A008678F9 /* VendrascoMovie.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5F554D3525A7794A008678F9 /* VendrascoMovie.xcdatamodeld */; };
 		5F554D3925A7794B008678F9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5F554D3825A7794B008678F9 /* Assets.xcassets */; };
 		5F554D3C25A7794B008678F9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5F554D3A25A7794B008678F9 /* LaunchScreen.storyboard */; };
+		5F554D4A25A7AC48008678F9 /* ListaFilmes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F554D4925A7AC48008678F9 /* ListaFilmes.swift */; };
+		6B91FBF639FE716E84280DC7 /* Pods_VendrascoMovie.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EEDDE7DC7C3B9A069F2AEBB /* Pods_VendrascoMovie.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2F1A668DD76A1E93E5166095 /* Pods-VendrascoMovie.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VendrascoMovie.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VendrascoMovie/Pods-VendrascoMovie.debug.xcconfig"; sourceTree = "<group>"; };
 		5F554D2B25A7794A008678F9 /* VendrascoMovie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VendrascoMovie.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5F554D2E25A7794A008678F9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5F554D3025A7794A008678F9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -24,6 +27,9 @@
 		5F554D3825A7794B008678F9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5F554D3B25A7794B008678F9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5F554D3D25A7794B008678F9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5F554D4925A7AC48008678F9 /* ListaFilmes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListaFilmes.swift; sourceTree = "<group>"; };
+		6EEDDE7DC7C3B9A069F2AEBB /* Pods_VendrascoMovie.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VendrascoMovie.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		910E67479E20E8D74DBBA2CD /* Pods-VendrascoMovie.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VendrascoMovie.release.xcconfig"; path = "Pods/Target Support Files/Pods-VendrascoMovie/Pods-VendrascoMovie.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +37,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6B91FBF639FE716E84280DC7 /* Pods_VendrascoMovie.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +49,8 @@
 			children = (
 				5F554D2D25A7794A008678F9 /* VendrascoMovie */,
 				5F554D2C25A7794A008678F9 /* Products */,
+				8FE9A4976403FF4FE135187E /* Pods */,
+				E3A90F39F3D35A7764773EC9 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,6 +65,7 @@
 		5F554D2D25A7794A008678F9 /* VendrascoMovie */ = {
 			isa = PBXGroup;
 			children = (
+				5F554D4325A786D0008678F9 /* Home */,
 				5F554D2E25A7794A008678F9 /* AppDelegate.swift */,
 				5F554D3025A7794A008678F9 /* ViewController.swift */,
 				5F554D3225A7794A008678F9 /* Main.storyboard */,
@@ -67,6 +77,39 @@
 			path = VendrascoMovie;
 			sourceTree = "<group>";
 		};
+		5F554D4325A786D0008678F9 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				5F554D4425A786DB008678F9 /* Model */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		5F554D4425A786DB008678F9 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				5F554D4925A7AC48008678F9 /* ListaFilmes.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		8FE9A4976403FF4FE135187E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2F1A668DD76A1E93E5166095 /* Pods-VendrascoMovie.debug.xcconfig */,
+				910E67479E20E8D74DBBA2CD /* Pods-VendrascoMovie.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		E3A90F39F3D35A7764773EC9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6EEDDE7DC7C3B9A069F2AEBB /* Pods_VendrascoMovie.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,9 +117,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5F554D4025A7794B008678F9 /* Build configuration list for PBXNativeTarget "VendrascoMovie" */;
 			buildPhases = (
+				BAE4F490E07B1E865C2D5D7A /* [CP] Check Pods Manifest.lock */,
 				5F554D2725A7794A008678F9 /* Sources */,
 				5F554D2825A7794A008678F9 /* Frameworks */,
 				5F554D2925A7794A008678F9 /* Resources */,
+				D1D5E37B2622651E56369A8B /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -133,12 +178,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		BAE4F490E07B1E865C2D5D7A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-VendrascoMovie-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D1D5E37B2622651E56369A8B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-VendrascoMovie/Pods-VendrascoMovie-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireImage.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-VendrascoMovie/Pods-VendrascoMovie-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		5F554D2725A7794A008678F9 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				5F554D3125A7794A008678F9 /* ViewController.swift in Sources */,
+				5F554D4A25A7AC48008678F9 /* ListaFilmes.swift in Sources */,
 				5F554D2F25A7794A008678F9 /* AppDelegate.swift in Sources */,
 				5F554D3725A7794A008678F9 /* VendrascoMovie.xcdatamodeld in Sources */,
 			);
@@ -284,6 +371,7 @@
 		};
 		5F554D4125A7794B008678F9 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2F1A668DD76A1E93E5166095 /* Pods-VendrascoMovie.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -302,6 +390,7 @@
 		};
 		5F554D4225A7794B008678F9 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 910E67479E20E8D74DBBA2CD /* Pods-VendrascoMovie.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
