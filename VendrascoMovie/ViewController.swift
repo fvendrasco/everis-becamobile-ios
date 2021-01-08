@@ -9,14 +9,13 @@
 import UIKit
 import Foundation
 import Alamofire
-
+import CoreData
 
 class ViewController: UIViewController, UITableViewDataSource {
     
     @IBOutlet weak var tabelaFilmes: UITableView!
+    var listaFilmes:[Movies] =  []
     
-    let listaFilmes:Array<String> = ["The Mandalorian", "Mulher Maravilha", "Soul"]
-
     override func viewDidLoad() {
         super.viewDidLoad()
         self.tabelaFilmes.dataSource = self
@@ -32,32 +31,46 @@ class ViewController: UIViewController, UITableViewDataSource {
             switch response.result{
             
             case .success:
-                
-                if let resposta = response.result.value as? Dictionary<String, Any> {
-                    guard let filmesLista = resposta["results"] as? Array<Dictionary<String, Any>> else {return}
+               
+                if let data = response.data {
+                    let decoder = JSONDecoder()
+                    let filmesOBJ = try? decoder.decode(MoviesResponse.self, from: data)
+                    
+                    if let movies = filmesOBJ?.results{
+                        
+                        self.listaFilmes = movies
+                        
+                        self.tabelaFilmes.reloadData()
+                    }
+                    
+                    
+                } else {
+                    print("Data Nil")
                     
                 }
-                
+               
                 break
             case .failure:
-                print(response.error!)
+                print(response.error ?? "Erro API")
                 
                 break
                 
-           
             }            
         }
     }
     
-    
     // MARK: Tela Home
+
+    
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return listaFilmes.count
     }
- 
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let celula = tableView.dequeueReusableCell(withIdentifier: "celula", for: indexPath)
-        celula.textLabel?.text = listaFilmes[indexPath.row]
+        let movie = listaFilmes[indexPath.row]
+        celula.textLabel?.text = movie.originalTitle ?? movie.originalName
         
         return celula
     }
