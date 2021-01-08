@@ -35,6 +35,7 @@ class ViewController: UIViewController, UITableViewDataSource {
                 
                 if let resposta = response.result.value as? Dictionary<String, Any> {
                     guard let filmesLista = resposta["results"] as? Array<Dictionary<String, Any>> else {return}
+                    
                 }
                 
                 break
@@ -43,7 +44,8 @@ class ViewController: UIViewController, UITableViewDataSource {
                 
                 break
                 
-            }
+           
+            }            
         }
     }
     
