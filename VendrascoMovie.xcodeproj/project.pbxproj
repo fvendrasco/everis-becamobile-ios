@@ -14,6 +14,7 @@
 		5F554D3925A7794B008678F9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5F554D3825A7794B008678F9 /* Assets.xcassets */; };
 		5F554D3C25A7794B008678F9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5F554D3A25A7794B008678F9 /* LaunchScreen.storyboard */; };
 		5F554D4A25A7AC48008678F9 /* ListaFilmes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F554D4925A7AC48008678F9 /* ListaFilmes.swift */; };
+		5F83CC9225A8E9F4005418FF /* DescricaoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F83CC9125A8E9F4005418FF /* DescricaoViewController.swift */; };
 		6B91FBF639FE716E84280DC7 /* Pods_VendrascoMovie.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EEDDE7DC7C3B9A069F2AEBB /* Pods_VendrascoMovie.framework */; };
 /* End PBXBuildFile section */
 
@@ -28,6 +29,7 @@
 		5F554D3B25A7794B008678F9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5F554D3D25A7794B008678F9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5F554D4925A7AC48008678F9 /* ListaFilmes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListaFilmes.swift; sourceTree = "<group>"; };
+		5F83CC9125A8E9F4005418FF /* DescricaoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescricaoViewController.swift; sourceTree = "<group>"; };
 		6EEDDE7DC7C3B9A069F2AEBB /* Pods_VendrascoMovie.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VendrascoMovie.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		910E67479E20E8D74DBBA2CD /* Pods-VendrascoMovie.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VendrascoMovie.release.xcconfig"; path = "Pods/Target Support Files/Pods-VendrascoMovie/Pods-VendrascoMovie.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -65,6 +67,7 @@
 		5F554D2D25A7794A008678F9 /* VendrascoMovie */ = {
 			isa = PBXGroup;
 			children = (
+				5F83CC8F25A8E9C1005418FF /* Descricao */,
 				5F554D4325A786D0008678F9 /* Home */,
 				5F554D2E25A7794A008678F9 /* AppDelegate.swift */,
 				5F554D3025A7794A008678F9 /* ViewController.swift */,
@@ -91,6 +94,22 @@
 				5F554D4925A7AC48008678F9 /* ListaFilmes.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		5F83CC8F25A8E9C1005418FF /* Descricao */ = {
+			isa = PBXGroup;
+			children = (
+				5F83CC9025A8E9D0005418FF /* View */,
+			);
+			path = Descricao;
+			sourceTree = "<group>";
+		};
+		5F83CC9025A8E9D0005418FF /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5F83CC9125A8E9F4005418FF /* DescricaoViewController.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		8FE9A4976403FF4FE135187E /* Pods */ = {
@@ -224,6 +243,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5F83CC9225A8E9F4005418FF /* DescricaoViewController.swift in Sources */,
 				5F554D3125A7794A008678F9 /* ViewController.swift in Sources */,
 				5F554D4A25A7AC48008678F9 /* ListaFilmes.swift in Sources */,
 				5F554D2F25A7794A008678F9 /* AppDelegate.swift in Sources */,
