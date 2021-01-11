@@ -11,7 +11,7 @@ import Foundation
 // MARK: - Welcome
 struct MoviesResponse: Codable {
     let page: Int
-    let results: [Movies]
+    let results: [Movie]
     let totalPages, totalResults: Int
     
     enum CodingKeys: String, CodingKey {
@@ -22,20 +22,20 @@ struct MoviesResponse: Codable {
 }
 
 // MARK: - Result
-struct Movies: Codable {
+struct Movie: Codable {
     let adult: Bool?
-    let backdropPath: String
-    let genreIDS: [Int]
-    let id: Int
-    let originalLanguage: OriginalLanguage
+    let backdropPath: String?
+    let genreIDS: [Int]?
+    let id: Int?
+    let originalLanguage: String?
     let originalTitle: String?
-    let overview, posterPath: String
+    let overview, posterPath: String?
     let releaseDate, title: String?
     let video: Bool?
-    let voteAverage: Double
-    let voteCount: Int
-    let popularity: Double
-    let mediaType: MediaType
+    let voteAverage: Double?
+    let voteCount: Int?
+    let popularity: Double?
+    let mediaType: String?
     let firstAirDate, name: String?
     let originCountry: [String]?
     let originalName: String?
@@ -60,14 +60,4 @@ struct Movies: Codable {
         case originCountry = "origin_country"
         case originalName = "original_name"
     }
-}
-
-enum MediaType: String, Codable {
-    case movie = "movie"
-    case tv = "tv"
-}
-
-enum OriginalLanguage: String, Codable {
-    case en = "en"
-    case ja = "ja"
 }

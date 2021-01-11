@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  HomeMoviesViewController.swift
 //  VendrascoMovie
 //
 //  Created by Felipe Augusto Vendrasco on 07/01/21.
@@ -11,14 +11,15 @@ import Foundation
 import Alamofire
 import CoreData
 
-class ViewController: UIViewController, UITableViewDataSource {
+class HomeMoviesViewController: UIViewController {
     
     @IBOutlet weak var tabelaFilmes: UITableView!
-    var listaFilmes:[Movies] =  []
+    var listaFilmes:[Movie] =  []
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.tabelaFilmes.dataSource = self
+        self.tabelaFilmes.delegate = self
         importaListaDeFilmes()
         // Do any additional setup after loading the view, typically from a nib.
     }
@@ -33,14 +34,20 @@ class ViewController: UIViewController, UITableViewDataSource {
             case .success:
                
                 if let data = response.data {
-                    let decoder = JSONDecoder()
-                    let filmesOBJ = try? decoder.decode(MoviesResponse.self, from: data)
                     
-                    if let movies = filmesOBJ?.results{
+                    do {
+                        let decoder = JSONDecoder()
+                        let filmesOBJ = try decoder.decode(MoviesResponse.self, from: data)
                         
-                        self.listaFilmes = movies
                         
-                        self.tabelaFilmes.reloadData()
+                            self.listaFilmes = filmesOBJ.results
+                            
+                            self.tabelaFilmes.reloadData()
+                        
+                        
+                    } catch let erro {
+                        print(erro.localizedDescription)
+                    
                     }
                     
                     
@@ -62,7 +69,15 @@ class ViewController: UIViewController, UITableViewDataSource {
     // MARK: Tela Home
 
     
+   
+
+    // MARK: Tela Descricao
+
+   
     
+}
+
+extension HomeMoviesViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return listaFilmes.count
     }
@@ -70,14 +85,33 @@ class ViewController: UIViewController, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let celula = tableView.dequeueReusableCell(withIdentifier: "celula", for: indexPath)
         let movie = listaFilmes[indexPath.row]
+        
         celula.textLabel?.text = movie.originalTitle ?? movie.originalName
+        
+        
         
         return celula
     }
-
-
-    // MARK: Tela Descricao
-    
-    
 }
 
+extension HomeMoviesViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let movie = listaFilmes[indexPath.row]
+        
+        callDescriptionView(filme: movie)
+    }
+    
+    func callDescriptionView(filme:Movie) {
+        
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        
+        
+        if let vc = storyboard.instantiateViewController(withIdentifier: "descricaoFilmes") as? DescricaoViewController {
+            
+            vc.filmeRecebido = filme
+            
+            navigationController?.pushViewController(vc, animated: true)
+            
+        }
+    }
+}
