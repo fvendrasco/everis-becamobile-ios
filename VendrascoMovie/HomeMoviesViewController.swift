@@ -32,28 +32,19 @@ class HomeMoviesViewController: UIViewController {
             switch response.result{
             
             case .success:
-               
                 if let data = response.data {
-                    
                     do {
                         let decoder = JSONDecoder()
                         let filmesOBJ = try decoder.decode(MoviesResponse.self, from: data)
-                        
-                        
                             self.listaFilmes = filmesOBJ.results
-                            
                             self.tabelaFilmes.reloadData()
-                        
                         
                     } catch let erro {
                         print(erro.localizedDescription)
-                    
                     }
-                    
                     
                 } else {
                     print("Data Nil")
-                    
                 }
                
                 break
@@ -61,20 +52,9 @@ class HomeMoviesViewController: UIViewController {
                 print(response.error ?? "Erro API")
                 
                 break
-                
             }            
         }
     }
-    
-    // MARK: Tela Home
-
-    
-   
-
-    // MARK: Tela Descricao
-
-   
-    
 }
 
 extension HomeMoviesViewController: UITableViewDataSource {
@@ -87,9 +67,7 @@ extension HomeMoviesViewController: UITableViewDataSource {
         let movie = listaFilmes[indexPath.row]
         
         celula.textLabel?.text = movie.originalTitle ?? movie.originalName
-        
-        
-        
+                
         return celula
     }
 }
@@ -102,16 +80,10 @@ extension HomeMoviesViewController: UITableViewDelegate {
     }
     
     func callDescriptionView(filme:Movie) {
-        
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        
-        
         if let vc = storyboard.instantiateViewController(withIdentifier: "descricaoFilmes") as? DescricaoViewController {
-            
             vc.filmeRecebido = filme
-            
             navigationController?.pushViewController(vc, animated: true)
-            
         }
     }
 }
