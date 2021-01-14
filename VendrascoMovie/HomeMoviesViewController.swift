@@ -25,7 +25,6 @@ class HomeMoviesViewController: UIViewController {
     }
 
     // MARK: - GET API
-    
     func importaListaDeFilmes() {
         Alamofire.request("https://api.themoviedb.org/3/trending/all/week?api_key=d30569abd40d52ac10aae81269a39d4d&language=pt-BR", method: .get).responseJSON { (response) in
             

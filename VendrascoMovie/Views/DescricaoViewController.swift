@@ -20,5 +20,18 @@ class DescricaoViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // MARK: - Visual Elements
+
+        
+        // MARK: - Properts
+
+        
+        // MARK: - Constructors
+
+        
+        // MARK: - Life Cycle
+
+        
+        // MARK: - ViewConfiguration
     }
 }

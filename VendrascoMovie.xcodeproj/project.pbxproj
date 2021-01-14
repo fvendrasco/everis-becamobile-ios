@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5F2AD86F25ABBAEB00692057 /* HomeMoviesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F2AD86E25ABBAEB00692057 /* HomeMoviesViewController.swift */; };
 		5F554D2F25A7794A008678F9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F554D2E25A7794A008678F9 /* AppDelegate.swift */; };
 		5F554D3425A7794A008678F9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5F554D3225A7794A008678F9 /* Main.storyboard */; };
 		5F554D3725A7794A008678F9 /* VendrascoMovie.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5F554D3525A7794A008678F9 /* VendrascoMovie.xcdatamodeld */; };
@@ -17,6 +16,9 @@
 		5F74404D25AE1BCB004B218D /* Pods_VendrascoMovie.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F74404C25AE1BCB004B218D /* Pods_VendrascoMovie.framework */; };
 		5F74404E25AE1BCB004B218D /* Pods_VendrascoMovie.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5F74404C25AE1BCB004B218D /* Pods_VendrascoMovie.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		5F74406225AE1FA9004B218D /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F74406125AE1FA9004B218D /* MainViewController.swift */; };
+		5F74406425AE30F5004B218D /* Bindable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F74406325AE30F5004B218D /* Bindable.swift */; };
+		5F74406625AE3236004B218D /* MainViewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F74406525AE3236004B218D /* MainViewData.swift */; };
+		5F74406825AE3D9F004B218D /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F74406725AE3D9F004B218D /* MainViewModel.swift */; };
 		5F83CC9225A8E9F4005418FF /* DescricaoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F83CC9125A8E9F4005418FF /* DescricaoViewController.swift */; };
 		6B91FBF639FE716E84280DC7 /* Pods_VendrascoMovie.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EEDDE7DC7C3B9A069F2AEBB /* Pods_VendrascoMovie.framework */; };
 /* End PBXBuildFile section */
@@ -37,7 +39,6 @@
 
 /* Begin PBXFileReference section */
 		2F1A668DD76A1E93E5166095 /* Pods-VendrascoMovie.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VendrascoMovie.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VendrascoMovie/Pods-VendrascoMovie.debug.xcconfig"; sourceTree = "<group>"; };
-		5F2AD86E25ABBAEB00692057 /* HomeMoviesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeMoviesViewController.swift; sourceTree = "<group>"; };
 		5F554D2B25A7794A008678F9 /* VendrascoMovie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VendrascoMovie.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5F554D2E25A7794A008678F9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5F554D3325A7794A008678F9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -48,6 +49,9 @@
 		5F554D4925A7AC48008678F9 /* ListaFilmes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListaFilmes.swift; sourceTree = "<group>"; };
 		5F74404C25AE1BCB004B218D /* Pods_VendrascoMovie.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Pods_VendrascoMovie.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5F74406125AE1FA9004B218D /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		5F74406325AE30F5004B218D /* Bindable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bindable.swift; sourceTree = "<group>"; };
+		5F74406525AE3236004B218D /* MainViewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewData.swift; sourceTree = "<group>"; };
+		5F74406725AE3D9F004B218D /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		5F83CC9125A8E9F4005418FF /* DescricaoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescricaoViewController.swift; sourceTree = "<group>"; };
 		6EEDDE7DC7C3B9A069F2AEBB /* Pods_VendrascoMovie.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VendrascoMovie.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		910E67479E20E8D74DBBA2CD /* Pods-VendrascoMovie.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VendrascoMovie.release.xcconfig"; path = "Pods/Target Support Files/Pods-VendrascoMovie/Pods-VendrascoMovie.release.xcconfig"; sourceTree = "<group>"; };
@@ -95,7 +99,6 @@
 				5F74404725AE1976004B218D /* Service */,
 				5F74404825AE197D004B218D /* Helper */,
 				5F74404925AE1990004B218D /* Resources */,
-				5F2AD86E25ABBAEB00692057 /* HomeMoviesViewController.swift */,
 			);
 			path = VendrascoMovie;
 			sourceTree = "<group>";
@@ -103,6 +106,8 @@
 		5F74404225AE1920004B218D /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				5F74406525AE3236004B218D /* MainViewData.swift */,
+				5F74406725AE3D9F004B218D /* MainViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -110,8 +115,8 @@
 		5F74404325AE192D004B218D /* Aplication */ = {
 			isa = PBXGroup;
 			children = (
-				5F554D3225A7794A008678F9 /* Main.storyboard */,
 				5F554D2E25A7794A008678F9 /* AppDelegate.swift */,
+				5F554D3225A7794A008678F9 /* Main.storyboard */,
 				5F554D3A25A7794B008678F9 /* LaunchScreen.storyboard */,
 				5F554D3D25A7794B008678F9 /* Info.plist */,
 				5F554D3525A7794A008678F9 /* VendrascoMovie.xcdatamodeld */,
@@ -139,6 +144,7 @@
 		5F74404625AE196F004B218D /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				5F74406325AE30F5004B218D /* Bindable.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -298,12 +304,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5F2AD86F25ABBAEB00692057 /* HomeMoviesViewController.swift in Sources */,
+				5F74406425AE30F5004B218D /* Bindable.swift in Sources */,
 				5F83CC9225A8E9F4005418FF /* DescricaoViewController.swift in Sources */,
 				5F554D4A25A7AC48008678F9 /* ListaFilmes.swift in Sources */,
 				5F74406225AE1FA9004B218D /* MainViewController.swift in Sources */,
 				5F554D2F25A7794A008678F9 /* AppDelegate.swift in Sources */,
 				5F554D3725A7794A008678F9 /* VendrascoMovie.xcdatamodeld in Sources */,
+				5F74406625AE3236004B218D /* MainViewData.swift in Sources */,
+				5F74406825AE3D9F004B218D /* MainViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
